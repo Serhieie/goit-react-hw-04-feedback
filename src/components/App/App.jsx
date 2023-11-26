@@ -59,7 +59,7 @@ export const App = () => {
  shadow-2xl shadow-orange-900  select-none min-h-[562px] relative before:content-[''] before:absolute
  before:top-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-r before:from-lightyellow
   before:to-burlywood before:bg-cover before:bg-center before:bg-fixed before:rounded-lg before:opacity-80
- before:-z-10 md:mt-10 md:py-6 md:px-1.5 md:w-[90%] md:h-[80vh] md:gap-7`}
+ before:-z-10 md:mt-10 md:py-2 md:px-1.5 md:w-[90%] md:h-[90vh] md:gap-7`}
     >
       <Section title={'Please leave feedback'}>
         {<Controls marksKeys={marksKeys} onLeaveFeedback={addMark} />}
