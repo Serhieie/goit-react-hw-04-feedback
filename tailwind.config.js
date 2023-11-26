@@ -7,8 +7,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        headerBgColor: '#3f51b5',
-        hoverColor: '#303f9f',
+        burlywood: 'burlywood',
+        brown: 'brown',
+        lightyellow: 'lightyellow',
+        shadowBox: 'brown',
+        darkFont: 'darkred',
+        lightFont: 'rgba(139, 0, 0, 0.6)',
+        white: 'white',
       },
       screens: {
         lg: { max: '1023px' },
@@ -16,7 +21,7 @@ module.exports = {
         sm: { max: '519px' },
         ssm: { max: '375px' },
         sm2: { min: '520px', max: '767px' },
-        largeScreen: { min: '1399px' },
+        largeScreen: { min: '1200px' },
         extraLargeScreen: { min: '1540px' },
       },
       fontFamily: {

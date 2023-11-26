@@ -1,34 +1,45 @@
 import PropTypes from 'prop-types';
-import CalculatedStats from '../CalculatedStats';
-import {
-  StatItem,
-  StatList,
-  StatQuantity,
-  QuantityArea,
-} from './Statistics.styled';
+import { CalculatedStats } from '../CalculatedStats/CalculatedStats';
 
-export default function Statistics({
+export function Statistics({
   marksKeys,
   marksValues,
   percentageOfPositive,
   totalFeedback,
 }) {
   return (
-    <StatList>
-      <QuantityArea>
+    <div
+      className="mx-auto mt-5 flex flex-col justify-center
+items-center gap-5 max-w-3xl rounded-lg pl-0 md:mt-4"
+    >
+      <ul
+        className="flex justify-center gap-6 list-none
+  rounded-lg pl-0 md:gap-2"
+      >
         {marksValues.map((value, i) => {
           return (
-            <StatItem key={i}>
-              {marksKeys[i]}:<StatQuantity>{value}</StatQuantity>
-            </StatItem>
+            <li
+              key={i}
+              className="text-1xl flex items-center py-1 px-4 box-border bg-burlywood
+              rounded-lg text-darkFont shadow-lg shadow-shadowBox md:flex-col md:text-2xl 
+              md:font-semibold md:p-2 md:gap-4 largeScreen:text-4xl largeScreen:gap-2  largeScreen:font-semibold"
+            >
+              {marksKeys[i]}:
+              <span
+                className={`font-3xl font-bold text-darkFont 
+              opacity-60 md:p-0 md:text-5xl largeScreen:font-4xl`}
+              >
+                {value}
+              </span>
+            </li>
           );
         })}
-      </QuantityArea>
+      </ul>
       <CalculatedStats
         percentageOfPositive={percentageOfPositive}
         totalFeedback={totalFeedback}
       />
-    </StatList>
+    </div>
   );
 }
 

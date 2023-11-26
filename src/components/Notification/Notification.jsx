@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
-import { NotoficationMessage } from './Notification.styled';
-export default function Notification({ message }) {
-  return <NotoficationMessage>{message}</NotoficationMessage>;
+export function Notification({ message }) {
+  return (
+    <p className="  text-center text-5xl font-bold text-darkFont mt-36 md:text-4xl">
+      {message}
+    </p>
+  );
 }
 
 Notification.propTypes = {

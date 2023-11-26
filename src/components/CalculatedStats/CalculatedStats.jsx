@@ -1,21 +1,18 @@
-import PropTypes from 'prop-types';
-import { CalculatedStatsText } from './CalculatedStats.styled';
-
-export default function CalculatedStats({
-  percentageOfPositive,
-  totalFeedback,
-}) {
+export function CalculatedStats({ percentageOfPositive, totalFeedback }) {
   return (
     <>
-      <CalculatedStatsText>
+      <p
+        className="  text-center text-3xl font-semibold text-darkFont m-0
+        mt-5 md:text-2xl md:w-full md:max-w-[320px] md:font-bold md:mt-1"
+      >
         Positive Feedbacks: {percentageOfPositive}
-      </CalculatedStatsText>
-      <CalculatedStatsText>Total: {totalFeedback}</CalculatedStatsText>
+      </p>
+      <p
+        className="  text-center text-3xl font-semibold text-darkFont m-0
+        mt-5 md:text-2xl md:w-full md:max-w-[320px] md:font-bold md:mt-1"
+      >
+        Total: {totalFeedback}
+      </p>
     </>
   );
 }
-
-CalculatedStats.propTypes = {
-  percentageOfPositive: PropTypes.string.isRequired,
-  totalFeedback: PropTypes.number.isRequired,
-};

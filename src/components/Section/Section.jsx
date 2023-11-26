@@ -1,12 +1,16 @@
 import PropTypes from 'prop-types';
-import { SectionDiv, SectionTitle } from './Section.styled';
 
-export default function Section({ title, children }) {
+export function Section({ title, children }) {
   return (
-    <SectionDiv>
-      <SectionTitle>{title}</SectionTitle>
+    <div
+      className="  mx-auto mt-8 rounded-lg pl-0 box-border md:mt-4
+"
+    >
+      <h2 className="text-center text-5xl font-bold m-0 text-darkFont">
+        {title}
+      </h2>
       {children}
-    </SectionDiv>
+    </div>
   );
 }
 
